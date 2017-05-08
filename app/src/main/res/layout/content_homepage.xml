@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tw.edu.fcu.vegetablemaster.homepage"
+    tools:showIn="@layout/activity_homepage">
+
+    <TextView
+        android:id="@+id/homepagetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="菜價先知"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <Button
+        android:id="@+id/suggestveg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="今日推薦蔬菜"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="178dp" />
+
+    <Button
+        android:id="@+id/historyveg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查詢歷史菜價"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="178dp" />
+
+    <Button
+        android:id="@+id/forecastveg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="預測漲跌幅"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="259dp" />
+
+    <Button
+        android:id="@+id/compareveg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="蔬菜水果比價"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="338dp" />
+
+    <Button
+        android:id="@+id/recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="好吃食譜連結"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="338dp" />
+
+    <ImageView
+        android:id="@+id/homepagepicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/homepageorigin"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+</android.support.constraint.ConstraintLayout>
