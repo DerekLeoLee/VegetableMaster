@@ -14,8 +14,9 @@
         android:layout_height="wrap_content"
         android:text="菜價先知"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="100dp" />
+        android:textSize="50sp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="67dp" />
 
     <Button
         android:id="@+id/suggestveg"
