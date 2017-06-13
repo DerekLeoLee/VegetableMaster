@@ -50,9 +50,9 @@ public class SuggestVeg extends AppCompatActivity {
                 String top3 = dataSnapshot.child("top3").getValue(String.class);
                 //String[] tops = FirebaseFunction.getTops();
 
-                sugTop1.setText("1. "+top1);
-                sugTop2.setText("2. "+top2);
-                sugTop3.setText("3. "+top3);
+                sugTop1.setText("1. "+top1+" NT$50"+"/台斤");
+                sugTop2.setText("2. "+top2+" NT$50"+"/台斤");
+                sugTop3.setText("3. "+top3+" NT$50"+"/台斤");
 
                 topImage1.setImageResource(getImageId(top1));
                 topImage2.setImageResource(getImageId(top2));
