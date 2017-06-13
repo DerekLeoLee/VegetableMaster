@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "454199664021",
+    "firebase_url": "https://vegetablemaster-9cf06.firebaseio.com",
+    "project_id": "vegetablemaster-9cf06",
+    "storage_bucket": "vegetablemaster-9cf06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454199664021:android:a687dc85022164b1",
+        "android_client_info": {
+          "package_name": "tw.edu.fcu.vegetablemaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454199664021-94gpoq3jiqadqlrbtq4h3rgh11cpgjuh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tw.edu.fcu.vegetablemaster",
+            "certificate_hash": "185b55b3b703f9b46bf0e59bc1b3662c87503ef8"
+          }
+        },
+        {
+          "client_id": "454199664021-l80eorvcih1c866ppohjim45lv33hnol.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tw.edu.fcu.vegetablemaster",
+            "certificate_hash": "99a95ec717d0f7cb54f38561ca1af87d420fe40e"
+          }
+        },
+        {
+          "client_id": "454199664021-a65lpqjskcpplniem19quieaqp10dn01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_YG_d_i0bCvLZpGpAnphMjmbroFPO__o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454199664021-a65lpqjskcpplniem19quieaqp10dn01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
