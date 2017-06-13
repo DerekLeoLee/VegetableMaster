@@ -16,6 +16,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import tw.edu.fcu.vegetablemaster.firebase.FirebaseFunction;
+
 public class homepage extends AppCompatActivity {
 
     private static final String TAG = "HomePage";
@@ -41,9 +43,10 @@ public class homepage extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-//                String top1 = dataSnapshot.child("top1").getValue(String.class);
-//                String top2 = dataSnapshot.child("top2").getValue(String.class);
-//                String top3 = dataSnapshot.child("top3").getValue(String.class);
+                String top1 = dataSnapshot.child("top1").getValue(String.class);
+                String top2 = dataSnapshot.child("top2").getValue(String.class);
+                String top3 = dataSnapshot.child("top3").getValue(String.class);
+                String[] tops = FirebaseFunction.getTops();
                 Log.d(TAG, "Value is: " + top1 + top2 + top3);
             }
 
