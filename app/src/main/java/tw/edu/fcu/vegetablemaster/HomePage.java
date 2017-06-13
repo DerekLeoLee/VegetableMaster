@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import tw.edu.fcu.vegetablemaster.firebase.FirebaseFunction;
 
-public class homepage extends AppCompatActivity {
+public class HomePage extends AppCompatActivity {
 
     private static final String TAG = "HomePage";
     Button compareBtn, forecastBtn, historyBtn, suggestBtn, recipeBtn;
@@ -61,7 +61,7 @@ public class homepage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(homepage.this, CompareVeg.class);
+                intent.setClass(HomePage.this, CompareVeg.class);
                 startActivity(intent);
             }
         });
@@ -70,7 +70,7 @@ public class homepage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(homepage.this, ForecastVeg.class);
+                intent.setClass(HomePage.this, ForecastVeg.class);
                 startActivity(intent);
             }
         });
@@ -79,7 +79,7 @@ public class homepage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(homepage.this, HistoryVeg.class);
+                intent.setClass(HomePage.this, HistoryVeg.class);
                 startActivity(intent);
             }
         });
@@ -88,7 +88,7 @@ public class homepage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(homepage.this, SuggestVeg.class);
+                intent.setClass(HomePage.this, SuggestVeg.class);
                 startActivity(intent);
             }
         });
@@ -97,7 +97,7 @@ public class homepage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(homepage.this, Recipe.class);
+                intent.setClass(HomePage.this, Recipe.class);
                 startActivity(intent);
             }
         });

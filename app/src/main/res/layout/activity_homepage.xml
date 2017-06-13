@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="tw.edu.fcu.vegetablemaster.homepage">
+    tools:context="tw.edu.fcu.vegetablemaster.HomePage">
 
     <include layout="@layout/content_homepage" />
 
