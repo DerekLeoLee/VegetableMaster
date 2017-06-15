@@ -86,6 +86,8 @@ public class SuggestVeg extends AppCompatActivity {
                 return R.drawable.spinach_1;
             case "空心菜-水空心菜":
                 return R.drawable.spinach_1;
+            case "空心菜":
+                return R.drawable.spinach_1;
             case "菠菜":
                 return  R.drawable.spinach_2;
             case "花椰菜":
