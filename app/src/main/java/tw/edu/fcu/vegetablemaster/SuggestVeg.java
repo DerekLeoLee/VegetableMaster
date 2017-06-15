@@ -73,14 +73,45 @@ public class SuggestVeg extends AppCompatActivity {
     private int getImageId(String name){
 
         switch (name){
-            case "白菜":
-                return R.drawable.chinese_cabbage;
+
+            case "芹菜":
+                return R.drawable.celery;
             case "高麗菜":
                 return R.drawable.cabbage;
-            case "空心菜":
-                return R.drawable.spinach;
+            case "白菜":
+                return R.drawable.chinese_cabbage;
+            case "空心菜-小葉":
+                return R.drawable.spinach_1;
+            case "空心菜-大葉":
+                return R.drawable.spinach_1;
+            case "空心菜-水空心菜":
+                return R.drawable.spinach_1;
+            case "菠菜":
+                return  R.drawable.spinach_2;
+            case "花椰菜":
+                return R.drawable.cauliflower;
+            case "青花椰菜":
+                return R.drawable.broccoli;
+            case "杏鮑菇":
+                return R.drawable.pleurotus;
+            case "青蔥-北蔥":
+                return R.drawable.shallot;
+            case "青蔥-粉蔥":
+                return R.drawable.shallot;
+            case "青蔥":
+                return R.drawable.shallot;
+            case "皇宮菜-大葉":
+                return R.drawable.palacedishes;
+            case "皇宮菜-小葉":
+                return R.drawable.palacedishes;
+            case "胡蘿蔔":
+                return R.drawable.carrot_1;
+            case "白蘿蔔":
+                return R.drawable.carrot_2;
+            case "青江菜":
+                return R.drawable.qingjiangcuisine;
         }
-        return R.drawable.spinach;
+        return R.drawable.nonameveg;
     }
 
 }
