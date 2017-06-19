@@ -16,7 +16,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 import tw.edu.fcu.vegetablemaster.firebase.FirebaseFunction;
+import tw.edu.fcu.vegetablemaster.firebase.Vegetable;
 
 public class HomePage extends AppCompatActivity {
 
@@ -37,17 +40,19 @@ public class HomePage extends AppCompatActivity {
         recipeBtn = (Button) findViewById(R.id.recipe);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("tops");
+        DatabaseReference myRef = database.getReference("vegetables/today");
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                String top1 = dataSnapshot.child("top1").getValue(String.class);
-                String top2 = dataSnapshot.child("top2").getValue(String.class);
-                String top3 = dataSnapshot.child("top3").getValue(String.class);
-                String[] tops = FirebaseFunction.getTops();
-                Log.d(TAG, "Value is: " + top1 + top2 + top3);
+                ArrayList<Vegetable> list = new ArrayList<Vegetable>();
+                for(DataSnapshot vegSnapshot: dataSnapshot.getChildren()) {
+                    list.add(vegSnapshot.getValue(Vegetable.class));
+                }
+                for(Vegetable veg: list) {
+                    Log.d(TAG, "onDataChange: "+ veg.name + " " + veg.avg_price);
+                }
             }
 
             @Override

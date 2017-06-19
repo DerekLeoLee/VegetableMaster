@@ -18,18 +18,18 @@ public class FirebaseFunction {
 
     private static final String TAG = "FirebaseFunction";
 
-    public static String[] getTops() {
+    public void getTodayPrice() {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("tops");
-        final String[] tops = new String[3];
+        DatabaseReference myRef = database.getReference("vegetables/today");
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                tops[0] = dataSnapshot.child("top1").getValue(String.class);
-                tops[1] = dataSnapshot.child("top2").getValue(String.class);
-                tops[2] = dataSnapshot.child("top3").getValue(String.class);
+                ArrayList<Vegetable> list = new ArrayList<Vegetable>();
+                for(DataSnapshot vegSnapshot: dataSnapshot.getChildren()) {
+                    list.add(vegSnapshot.getValue(Vegetable.class));
+                }
             }
 
             @Override
@@ -38,7 +38,6 @@ public class FirebaseFunction {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-        return tops;
     }
 
 }
