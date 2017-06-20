@@ -41,7 +41,7 @@ public class HistoryVeg extends AppCompatActivity {
         todayPic = (ImageView) findViewById(R.id.showhisvegpic_2);
         yesterdayPic = (ImageView) findViewById(R.id.showhisvegpic_1);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         DatabaseReference yesterdayRef = database.getReference("vegetables/yesterday");
         yesterdayRef.addValueEventListener(new ValueEventListener() {
@@ -54,45 +54,45 @@ public class HistoryVeg extends AppCompatActivity {
                     list.add(vegSnapshot.getValue(Vegetable.class));
                 }
                 yesterdayVeg = list;
-            }
 
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
-
-        DatabaseReference todayRef = database.getReference("vegetables/today");
-        todayRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                ArrayList<Vegetable> list = new ArrayList<Vegetable>();
-                for (DataSnapshot vegSnapshot : dataSnapshot.getChildren()) {
-                    list.add(vegSnapshot.getValue(Vegetable.class));
-                }
-                ArrayAdapter<Vegetable> adapter = new ArrayAdapter<Vegetable>(getApplicationContext(), R.layout.spinner_item, list);
-                spinner.setAdapter(adapter);
-                spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                DatabaseReference todayRef = database.getReference("vegetables/today");
+                todayRef.addValueEventListener(new ValueEventListener() {
                     @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        Vegetable vegSelected = (Vegetable) (parent.getItemAtPosition(position));
-                        vegName.setText(vegSelected.toString());
-                        todayPrice.setText("現在 " + vegSelected.avg_price.toString() + " 台幣/台斤");
-                        for (Vegetable veg : yesterdayVeg) {
-                            if (veg.name.equals(vegSelected.name)) {
-                                yesterdayPrice.setText("過去 " + veg.avg_price.toString() + " 台幣/台斤");
-                            }
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        // This method is called once with the initial value and again
+                        // whenever data at this location is updated.
+                        ArrayList<Vegetable> list = new ArrayList<Vegetable>();
+                        for (DataSnapshot vegSnapshot : dataSnapshot.getChildren()) {
+                            list.add(vegSnapshot.getValue(Vegetable.class));
                         }
-                        todayPic.setImageResource(getImageId(vegSelected.name));
-                        yesterdayPic.setImageResource(getImageId(vegSelected.name));
+                        ArrayAdapter<Vegetable> adapter = new ArrayAdapter<Vegetable>(getApplicationContext(), R.layout.spinner_item, list);
+                        spinner.setAdapter(adapter);
+                        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                Vegetable vegSelected = (Vegetable) (parent.getItemAtPosition(position));
+                                vegName.setText(vegSelected.toString());
+                                todayPrice.setText("現在 " + vegSelected.avg_price.toString() + " 台幣/台斤");
+                                for (Vegetable veg : yesterdayVeg) {
+                                    if (veg.name.equals(vegSelected.name)) {
+                                        yesterdayPrice.setText("過去 " + veg.avg_price.toString() + " 台幣/台斤");
+                                    }
+                                }
+                                todayPic.setImageResource(getImageId(vegSelected.name));
+                                yesterdayPic.setImageResource(getImageId(vegSelected.name));
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parent) {
+
+                            }
+                        });
                     }
 
                     @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-
+                    public void onCancelled(DatabaseError error) {
+                        // Failed to read value
+                        Log.w(TAG, "Failed to read value.", error.toException());
                     }
                 });
             }
@@ -103,7 +103,6 @@ public class HistoryVeg extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-
 
     }
 
