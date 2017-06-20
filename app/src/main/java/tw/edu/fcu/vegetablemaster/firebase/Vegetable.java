@@ -25,4 +25,8 @@ public class Vegetable {
         this.low_price = low_price;
         this.avg_price = avg_price;
     }
+
+    public String toString() {
+        return this.name;
+    }
 }
