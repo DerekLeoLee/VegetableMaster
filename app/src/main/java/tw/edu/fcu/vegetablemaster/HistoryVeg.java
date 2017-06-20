@@ -73,7 +73,7 @@ public class HistoryVeg extends AppCompatActivity {
                 for (DataSnapshot vegSnapshot : dataSnapshot.getChildren()) {
                     list.add(vegSnapshot.getValue(Vegetable.class));
                 }
-                ArrayAdapter<Vegetable> adapter = new ArrayAdapter<Vegetable>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, list);
+                ArrayAdapter<Vegetable> adapter = new ArrayAdapter<Vegetable>(getApplicationContext(), R.layout.spinner_item, list);
                 spinner.setAdapter(adapter);
                 spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
