@@ -33,11 +33,11 @@ public class HomePage extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        compareBtn = (Button) findViewById(R.id.compareveg);
-        forecastBtn = (Button) findViewById(R.id.forecastveg);
+       // compareBtn = (Button) findViewById(R.id.compareveg);
+       // forecastBtn = (Button) findViewById(R.id.forecastveg);
         historyBtn = (Button) findViewById(R.id.historyveg);
         suggestBtn = (Button) findViewById(R.id.suggestveg);
-        recipeBtn = (Button) findViewById(R.id.recipe);
+      //  recipeBtn = (Button) findViewById(R.id.recipe);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("vegetables/today");
@@ -61,7 +61,7 @@ public class HomePage extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-
+/*
         compareBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,7 +79,7 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+*/
         historyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,7 +97,7 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+/*
         recipeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,7 +106,7 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+*/
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
