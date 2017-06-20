@@ -26,9 +26,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".SuggestVeg"
-            android:label="Suggest Vegetable"/>
+            android:label="今日推薦蔬菜"/>
         <activity android:name=".HistoryVeg"
-            android:label="History Vegetable"/>
+            android:label="歷史菜價查詢"/>
         <activity android:name=".ForecastVeg"
             android:label="Forecast Vegetable"/>
         <activity android:name=".CompareVeg"
