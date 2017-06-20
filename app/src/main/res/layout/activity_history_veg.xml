@@ -36,22 +36,23 @@
         android:id="@+id/showhisvegpic_1"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        app:srcCompat="@drawable/cabbage"
-        android:layout_marginTop="55dp"
-        app:layout_constraintTop_toBottomOf="@+id/showhisveg_1"
         android:layout_marginLeft="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="55dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="70dp" />
+        app:layout_constraintTop_toBottomOf="@+id/showhisveg_1"
+        app:srcCompat="@drawable/cabbage" />
 
     <ImageView
         android:id="@+id/showhisvegpic_2"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        app:srcCompat="@drawable/cabbage"
-        android:layout_marginTop="40dp"
-        app:layout_constraintTop_toBottomOf="@+id/showhisvegpic_1"
         android:layout_marginLeft="70dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showhisvegpic_1"
+        app:srcCompat="@drawable/cabbage" />
 
     <TextView
         android:id="@+id/showhisveg_2"
